@@ -1,0 +1,20 @@
+﻿post:
+  description: Creates a new tournament
+  summary: Create tournament
+  tags: [Tournament]
+  operationId: create-tournament
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/tournament/tournament_create.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/tournament/tournament_overview_item.yaml'
+    '409':
+      description: Conflict, a tournament with the same name already exists

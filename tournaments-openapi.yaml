@@ -29,5 +29,7 @@ security:
       - read
       - write
 paths:
+  /api/v1/tournament:
+    $ref: 'paths/tournament/create.yaml'
   /api/v1/tournament/search:
     $ref: 'paths/tournament/search.yaml'

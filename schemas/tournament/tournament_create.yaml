@@ -1,0 +1,11 @@
+﻿description: The info provided to create a new tournament
+type: object
+properties:
+  name:
+    type: string
+    minLength: 1
+    maxLength: 256
+    description: Name of the tournament
+    example: Lier Open Masters 2024
+required:
+  - name
