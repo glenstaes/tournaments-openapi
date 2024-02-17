@@ -1,0 +1,28 @@
+﻿openapi: 3.0.3
+info:
+  title: API description for the Tournaments application
+  version: '1.0'
+  contact:
+    name: Glen Staes
+    url: https://github.com/glenstaes
+servers:
+  - url: 'http://localhost:5000'
+tags:
+  - name: Common
+    description: Operations shared across the application
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://example.com/oauth/authorize
+          tokenUrl: https://example.com/oauth/token
+          scopes:
+            read: Grants read access
+            write: Grants write access
+            admin: Grants access to admin operations
+security:
+  - OAuth2:
+      - read
+      - write

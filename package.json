@@ -1,0 +1,20 @@
+﻿{
+  "name": "tournaments-openapi",
+  "version": "1.0.0",
+  "description": "OpenAPI specification of a new Tournaments application that runs in the browser.",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server -d -o /index.html -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/peopleware/huvepharma-openapi.git"
+  },
+  "author": "Glen Staes",
+  "license": "ISC",
+  "homepage": "https://github.com/glenstaes/tournaments-openapi#readme"
+}
