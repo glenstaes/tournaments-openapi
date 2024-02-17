@@ -1,0 +1,20 @@
+﻿description: Item for the overview of divisions
+type: object
+allOf:
+  - $ref: '../audited_persistent_object.yaml'
+  - type: object
+    properties:
+      name:
+        type: string
+        minLength: 1
+        maxLength: 256
+        description: Name of the division
+        example: Masters 60+
+      tournamentId:
+        type: number
+        description: The id of the tournament this division is part of.
+        example: 18
+    required:
+      - id
+      - name
+      - tournamentId

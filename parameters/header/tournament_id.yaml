@@ -1,0 +1,7 @@
+in: header
+name: X-TOURNAMENT-ID
+description: |-
+  The tournament-id header should be passed with all API calls once the user has selected a tournament.
+schema:
+  type: string
+required: true

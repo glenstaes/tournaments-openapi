@@ -12,6 +12,8 @@ tags:
     description: Operations shared across the application
   - name: Tournament
     description: Operations related to tournaments
+  - name: Division
+    description: Operations related to divisions
 components:
   securitySchemes:
     OAuth2:
@@ -35,3 +37,5 @@ paths:
     $ref: 'paths/tournament/instance.yaml'
   /api/v1/tournament/search:
     $ref: 'paths/tournament/search.yaml'
+  /api/v1/division/search:
+    $ref: 'paths/division/search.yaml'

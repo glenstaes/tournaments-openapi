@@ -1,0 +1,25 @@
+﻿get:
+  description: Gets a paged result of all divisions within a tournament
+  summary: Search divisions
+  tags: [Division]
+  operationId: search-divisions
+  parameters:
+    - $ref: '../../parameters/header/tournament_id.yaml'
+    - $ref: '../../parameters/query/page.yaml'
+    - $ref: '../../parameters/query/page_size.yaml'
+    - $ref: '../../parameters/query/search_value.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '../../schemas/paged_list.yaml'
+              - type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      allOf:
+                        - $ref: '../../schemas/division/division_overview_item.yaml'
