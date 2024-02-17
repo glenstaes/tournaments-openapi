@@ -1,0 +1,44 @@
+nullable: true
+type: object
+properties:
+  pageIndex:
+    type: integer
+    format: int32
+    minimum: 1
+    description: The page currently returned.
+  pageSize:
+    type: integer
+    format: int32
+    minimum: 1
+    maximum: 50
+    description: The number of records per page.
+  totalCount:
+    type: integer
+    format: int32
+    minimum: 0
+    description: The total number of records matching the search request.
+  totalPages:
+    type: integer
+    format: int32
+    minimum: 0
+    description: The total number of pages containing matching results.
+  hasPreviousPage:
+    type: boolean
+    description: Indicator that is true when a previous page is present.
+  hasNextPage:
+    type: boolean
+    description: Indicator that is true when a next page is present.
+required:
+  - pageIndex
+  - pageSize
+  - totalCount
+  - totalPages
+  - hasPreviousPage
+  - hasNextPage
+example:
+  pageIndex: 1
+  pageSize: 10
+  totalCount: 15
+  totalPages: 2
+  hasPreviousPage: false
+  hasNextPage: true

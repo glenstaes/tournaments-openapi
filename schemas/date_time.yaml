@@ -1,0 +1,5 @@
+type: string
+format: 'date-time'
+description: |-
+  An ISO-8601 compliant string that represents a date formatted as yyyy-MM-ddThh:mm:ss.sssssssZ
+example: '2021-03-12T15:24:37.3274513Z'

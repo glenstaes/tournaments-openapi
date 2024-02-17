@@ -1,0 +1,4 @@
+type: string
+format: binary
+description: |-
+  schema for a file download.

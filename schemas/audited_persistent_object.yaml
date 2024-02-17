@@ -1,0 +1,23 @@
+description: Base object with primary key and audit fields.
+nullable: true
+type: object
+allOf:
+  - $ref: 'persistent_object.yaml'
+  - type: object
+    properties:
+      createdAt:
+        $ref: 'date_time.yaml'
+      createdBy:
+        type: string
+        minLength: 1
+        maxLength: 256
+        description: User that created this object.
+      lastModifiedAt:
+        $ref: 'date_time.yaml'
+      lastModifiedBy:
+        type: string
+        maxLength: 256
+        description: User that last modified this object.
+    required:
+      - createdAt
+      - createdBy
