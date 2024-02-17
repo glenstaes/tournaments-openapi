@@ -18,3 +18,13 @@
         application/json:
           schema:
             $ref: '../../schemas/tournament/tournament_overview_item.yaml'
+delete:
+  description: Deletes an existing tournament
+  summary: Delete tournament
+  tags: [Tournament]
+  operationId: delete-tournament
+  parameters:
+    - $ref: '../../parameters/path/tournament_id.yaml'
+  responses:
+    '204':
+      description: Deleted
