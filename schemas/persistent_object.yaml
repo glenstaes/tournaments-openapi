@@ -1,0 +1,9 @@
+description: Base object with primary key and audit fields.
+nullable: true
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+    minimum: 1
+    description: The primary key of the object.

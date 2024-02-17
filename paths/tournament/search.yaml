@@ -1,0 +1,24 @@
+﻿get:
+  description: Gets a paged result of all available tournaments
+  summary: Search tournaments
+  tags: [Tournament]
+  operationId: search-tournaments
+  parameters:
+    - $ref: '../../parameters/query/page.yaml'
+    - $ref: '../../parameters/query/page_size.yaml'
+    - $ref: '../../parameters/query/search_value.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '../../schemas/paged_list.yaml'
+              - type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      allOf:
+                        - $ref: '../../schemas/tournament/tournament_overview_item.yaml'

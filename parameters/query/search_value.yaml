@@ -1,0 +1,6 @@
+name: searchValue
+description: The string value to search for.
+in: query
+required: false
+schema:
+  type: string

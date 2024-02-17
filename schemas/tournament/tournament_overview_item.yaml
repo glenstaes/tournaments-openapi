@@ -1,0 +1,15 @@
+﻿description: Item for the overview of tournaments
+type: object
+allOf:
+  - $ref: '../audited_persistent_object.yaml'
+  - type: object
+    properties:
+      name:
+        type: string
+        minLength: 1
+        maxLength: 256
+        description: Name of the tournament
+        example: John Doe
+    required:
+      - id
+      - name

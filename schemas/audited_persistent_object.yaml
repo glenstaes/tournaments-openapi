@@ -12,12 +12,14 @@ allOf:
         minLength: 1
         maxLength: 256
         description: User that created this object.
+        example: john_doe@example.com
       lastModifiedAt:
         $ref: 'date_time.yaml'
       lastModifiedBy:
         type: string
         maxLength: 256
         description: User that last modified this object.
+        example: john_doe@example.com
     required:
       - createdAt
       - createdBy

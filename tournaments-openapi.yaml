@@ -10,6 +10,8 @@ servers:
 tags:
   - name: Common
     description: Operations shared across the application
+  - name: Tournament
+    description: Operations related to tournaments
 components:
   securitySchemes:
     OAuth2:
@@ -26,3 +28,6 @@ security:
   - OAuth2:
       - read
       - write
+paths:
+  /api/v1/tournament/search:
+    $ref: 'paths/tournament/search.yaml'

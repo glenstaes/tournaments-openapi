@@ -1,0 +1,9 @@
+name: page
+in: query
+required: true
+description: Page number that should be retrieved.
+schema:
+  type: integer
+  format: int32
+  minimum: 1
+  example: 1
