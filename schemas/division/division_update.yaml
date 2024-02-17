@@ -1,0 +1,6 @@
+﻿description: The info provided to update an existing division
+type: object
+allOf:
+  - $ref: 'division_create.yaml'
+required:
+  - name

@@ -1,0 +1,22 @@
+﻿post:
+  description: Creates a new division
+  summary: Create division
+  tags: [Division]
+  operationId: create-division
+  parameters:
+    - $ref: '../../parameters/header/tournament_id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/division/division_create.yaml'
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/division/division_overview_item.yaml'
+    '409':
+      description: Conflict, a division with the same name already exists

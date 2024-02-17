@@ -1,0 +1,30 @@
+﻿put:
+  description: Updates an existing division
+  summary: Update division
+  tags: [Division]
+  operationId: update-division
+  parameters:
+    - $ref: '../../parameters/header/tournament_id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/division/division_update.yaml'
+  responses:
+    '201':
+      description: Updated
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/division/division_overview_item.yaml'
+delete:
+  description: Deletes an existing division
+  summary: Delete division
+  tags: [Division]
+  operationId: delete-division
+  parameters:
+    - $ref: '../../parameters/header/tournament_id.yaml'
+  responses:
+    '204':
+      description: Deleted

@@ -1,0 +1,11 @@
+﻿description: The info provided to create a new division
+type: object
+properties:
+  name:
+    type: string
+    minLength: 1
+    maxLength: 256
+    description: Name of the division
+    example: Masters 60+
+required:
+  - name

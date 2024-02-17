@@ -37,5 +37,10 @@ paths:
     $ref: 'paths/tournament/instance.yaml'
   /api/v1/tournament/search:
     $ref: 'paths/tournament/search.yaml'
+  /api/v1/division:
+    $ref: 'paths/division/create.yaml'
+  /api/v1/division/{divisionId}:
+    $ref: 'paths/division/instance.yaml'
   /api/v1/division/search:
     $ref: 'paths/division/search.yaml'
+  
