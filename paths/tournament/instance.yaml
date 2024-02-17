@@ -1,0 +1,20 @@
+﻿put:
+  description: Updates an existing
+  summary: Update tournament
+  tags: [Tournament]
+  operationId: update-tournament
+  parameters:
+    - $ref: '../../parameters/path/tournament_id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/tournament/tournament_update.yaml'
+  responses:
+    '201':
+      description: Updated
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/tournament/tournament_overview_item.yaml'

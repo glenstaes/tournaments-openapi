@@ -1,0 +1,9 @@
+name: tournamentId
+in: path
+required: true
+description: The unique identifier of the tournament.
+schema:
+  type: integer
+  format: int32
+  minimum: 1
+  example: 1

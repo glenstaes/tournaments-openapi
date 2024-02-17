@@ -1,0 +1,6 @@
+﻿description: The info provided to update an existing tournament
+type: object
+allOf:
+  - $ref: 'tournament_create.yaml'
+required:
+  - name

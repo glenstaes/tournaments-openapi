@@ -9,7 +9,7 @@ allOf:
         minLength: 1
         maxLength: 256
         description: Name of the tournament
-        example: John Doe
+        example: Lier Open Master 2024
     required:
       - id
       - name
